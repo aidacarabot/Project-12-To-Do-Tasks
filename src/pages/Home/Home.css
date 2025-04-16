@@ -1,0 +1,32 @@
+ .div-addBtn > button {
+  padding : 10px;
+  font-weight: 900;
+  font-size: 16px;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  border-radius: 10px;
+  border: 1px solid #e0e1dd
+}
+
+.div-addBtn > button:hover {
+  background-color: #415a77;
+  color: #e0e1dd;
+  border: 1px solid #e0e1dd;
+  cursor: pointer;
+}
+
+.div-addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.tasks-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 100%;
+  gap: 30px;
+}

@@ -1,0 +1,197 @@
+.task-list {
+  background-color: #1b263b;
+  border-radius: 10px;
+  border: 1px solid #e0e1dd;
+  min-width: 500px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  color: #e0e1dd;
+  align-items: center;
+  padding:  15px 20px;
+}
+
+.task-list > header {
+  width: 100%;
+}
+
+.task-list > header > h2 {
+  display: flex;
+  align-self: self-start; 
+  margin-bottom: 50px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.task-list > header > h2:hover {
+  cursor: pointer;
+}
+
+.task-list > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+
+.task-list > ul > li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 24px;
+}
+
+.delete-task {
+  border-radius: 100%;
+  padding: 1px 8px;
+  font-size: 18px;
+  background-color: #415a77;
+  color: #e0e1dd;
+  border: none;
+  display: flex;
+}
+
+.delete-task:hover {
+  cursor: pointer;
+  background-color: #e63946;
+}
+
+.addTask-button {
+  padding : 10px;
+  font-weight: 900;
+  font-size: 16px;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  border-radius: 10px;
+  border: 1px solid #e0e1dd;
+  margin-bottom: 20px;
+}
+
+.addTask-button:hover {
+  background-color: #415a77;
+  color: #e0e1dd;
+  border: 1px solid #e0e1dd;
+  cursor: pointer;
+}
+
+.task-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-input > input {
+  width: 80%;
+  padding: 10px;
+  background-color: #1b263b;
+  border-radius: 10px;
+  border: 1px solid #e0e1dd;
+  color: #e0e1dd;
+  font-size: 24px;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box; 
+}
+
+.delete-list-button {
+  color: #e0e1dd;
+  background-color: #415a77;
+  padding: 5px 10px;
+  border: 1px solid #e0e1dd;
+  border-radius: 5px;
+  display: flex;
+  align-self: self-end;
+}
+
+.delete-list-button:hover {
+  cursor: pointer;
+}
+
+/* Estilos para el nuevo checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+/* Crear el checkbox personalizado */
+.checkmark {
+  --clr: #0B6E4F;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+/* Cuando el checkbox está marcado, agrega un fondo azul */
+.container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: .5rem;
+  animation: pulse 500ms ease-in-out;
+}
+
+/* Crear la marca de verificación (indicador), oculta cuando no está marcada */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Mostrar la marca de verificación cuando está marcada */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Estilo de la marca de verificación */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #E0E0E2;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+/* Animación para el pulso */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #0B6E4F90;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #0B6E4F60;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #0B6E4F30;
+    rotate: 0;
+  }
+}
