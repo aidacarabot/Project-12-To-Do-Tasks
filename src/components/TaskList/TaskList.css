@@ -27,6 +27,17 @@
   cursor: pointer;
 }
 
+.title-input {
+  margin-bottom: 50px;
+  background-color: #1b263b;
+  border: none;
+  color: #e0e1dd;
+  font-size: 30px;
+  outline: none;
+  appearance: none;
+  box-sizing: border-box; 
+}
+
 .task-list > ul {
   width: 100%;
   display: flex;
@@ -96,7 +107,7 @@
   border: 1px solid #e0e1dd;
   color: #e0e1dd;
   font-size: 24px;
-  outline: none;
+  outline: none; /* Elimina el contorno predeterminado al enfocarse */
   appearance: none;
   box-sizing: border-box; 
 }
@@ -193,5 +204,34 @@
   100% {
     box-shadow: 0 0 0 13px #0B6E4F30;
     rotate: 0;
+  }
+}
+
+/* ! WEB RESPONSIVENESS */
+
+@media (width < 530px) {
+  .task-list {
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  .task-list > header > h2 {
+    font-size: 24px;
+  }
+
+  .task-list > ul > li {
+    font-size: 20px;
+  }
+
+  .delete-task {
+    font-size: 16px;
+  }
+
+  .addTask-button {
+    font-size: 14px;
+  }
+
+  .task-input > input {
+    font-size: 18px;
   }
 }
