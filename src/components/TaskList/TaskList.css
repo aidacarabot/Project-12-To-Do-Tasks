@@ -1,26 +1,26 @@
 .task-list {
-  background-color: #1b263b;
-  border-radius: 10px;
-  border: 1px solid #e0e1dd;
-  min-width: 500px;
-  max-width: 800px;
+  background-color: var(--color-2);
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--color-6);
+  min-width: var(--width-m);
+  max-width: var(--width-l);
   display: flex;
   flex-direction: column;
-  color: #e0e1dd;
+  color: var(--color-6);
   align-items: center;
   padding:  15px 20px;
 }
 
 .task-list > header {
-  width: 100%;
+  width: var(--width-full);
 }
 
 .task-list > header > h2 {
   display: flex;
   align-self: self-start; 
-  margin-bottom: 50px;
-  width: 100%;
-  font-size: 30px;
+  margin-bottom: var(--margin-l);
+  width: var(--width-full);
+  font-size: var(--font-size-xxl);
 }
 
 .task-list > header > h2:hover {
@@ -28,96 +28,95 @@
 }
 
 .title-input {
-  margin-bottom: 50px;
-  background-color: #1b263b;
+  margin-bottom: var(--margin-l);
+  background-color: var(--color-2);
   border: none;
-  color: #e0e1dd;
-  font-size: 30px;
+  color: var(--color-6);
+  font-size: var(--font-size-xxl);
   outline: none;
   appearance: none;
   box-sizing: border-box; 
 }
 
 .task-list > ul {
-  width: 100%;
+  width: var(--width-full);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding-left: 40px;
-  padding-right: 30px;
-  margin-bottom: 50px;
+  gap: var(--gap-s);
+  padding-left: var(--padding-l);
+  padding-right: var(--padding-m);
+  margin-bottom: var(--margin-l);
 }
 
 .task-list > ul > li {
-  width: 100%;
+  width: var(--width-full);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  font-size: 24px;
+  gap: var(--gap-m);
+  font-size: var(--font-size-xl);
 }
 
 .delete-task {
-  border-radius: 100%;
+  border-radius: var(--border-radius-full);
   padding: 1px 8px;
-  font-size: 18px;
-  background-color: #415a77;
-  color: #e0e1dd;
+  font-size: var(--font-size-m);
+  background-color: var(--color-3);
+  color: var(--color-6);
   border: none;
   display: flex;
 }
 
 .delete-task:hover {
   cursor: pointer;
-  background-color: #e63946;
+  background-color: var(--color-delete);
 }
 
 .addTask-button {
-  padding : 10px;
-  font-weight: 900;
-  font-size: 16px;
-  background-color: #1b263b;
-  color: #e0e1dd;
-  border-radius: 10px;
-  border: 1px solid #e0e1dd;
-  margin-bottom: 20px;
+  padding : var(--pading-xs);
+  font-size: var(--font-size-s);
+  background-color: var(--color-2);
+  color: var(--color-6);
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--color-6);
+  margin-bottom: var(--margin-s);
 }
 
 .addTask-button:hover {
-  background-color: #415a77;
-  color: #e0e1dd;
-  border: 1px solid #e0e1dd;
+  background-color: var(--color-3);
+  color: var(--color-6);
+  border: 1px solid var(--color-6);
   cursor: pointer;
 }
 
 .task-input {
-  width: 100%;
+  width: var(--width-full);
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--margin-s);
 }
 
 .task-input > input {
-  width: 80%;
-  padding: 10px;
-  background-color: #1b263b;
-  border-radius: 10px;
-  border: 1px solid #e0e1dd;
-  color: #e0e1dd;
-  font-size: 24px;
-  outline: none; /* Elimina el contorno predeterminado al enfocarse */
+  width: var(--width-input);
+  padding: var(--pading-xs);
+  background-color: var(--color-2);
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--color-6);
+  color: var(--color-6);
+  font-size: var(--font-size-xl);
+  outline: none;
   appearance: none;
   box-sizing: border-box; 
 }
 
 .delete-list-button {
-  color: #e0e1dd;
-  background-color: #415a77;
+  color: var(--color-6);
+  background-color: var(--color-3);
   padding: 5px 10px;
-  border: 1px solid #e0e1dd;
-  border-radius: 5px;
+  border: 1px solid var(--color-6);
+  border-radius: var(--border-radius-xs);
   display: flex;
   align-self: self-end;
 }
@@ -126,7 +125,8 @@
   cursor: pointer;
 }
 
-/* Estilos para el nuevo checkbox */
+
+/** Estilos para el nuevo checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -143,9 +143,7 @@
   user-select: none;
 }
 
-/* Crear el checkbox personalizado */
 .checkmark {
-  --clr: #0B6E4F;
   position: relative;
   top: 0;
   left: 0;
@@ -156,26 +154,21 @@
   transition: 300ms;
 }
 
-/* Cuando el checkbox está marcado, agrega un fondo azul */
 .container input:checked ~ .checkmark {
-  background-color: var(--clr);
+  background-color: var(--color-check);
   border-radius: .5rem;
   animation: pulse 500ms ease-in-out;
 }
-
-/* Crear la marca de verificación (indicador), oculta cuando no está marcada */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Mostrar la marca de verificación cuando está marcada */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Estilo de la marca de verificación */
 .container .checkmark:after {
   left: 0.45em;
   top: 0.25em;
@@ -186,7 +179,6 @@
   transform: rotate(45deg);
 }
 
-/* Animación para el pulso */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 #0B6E4F90;
@@ -207,31 +199,31 @@
   }
 }
 
-/* ! WEB RESPONSIVENESS */
 
+/* ! WEB RESPONSIVENESS */
 @media (width < 530px) {
   .task-list {
-    min-width: 300px;
-    max-width: 500px;
+    min-width: var(--width-s);
+    max-width: var(--width-m);
   }
 
   .task-list > header > h2 {
-    font-size: 24px;
+    font-size: var(--font-size-xl);
   }
 
   .task-list > ul > li {
-    font-size: 20px;
+    font-size: var(--font-size-l);
   }
 
   .delete-task {
-    font-size: 16px;
+    font-size: var(--font-size-s);
   }
 
   .addTask-button {
-    font-size: 14px;
+    font-size: var(--font-size-xs);
   }
 
   .task-input > input {
-    font-size: 18px;
+    font-size: var(--font-size-m);
   }
 }

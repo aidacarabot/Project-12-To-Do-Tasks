@@ -3,3 +3,53 @@
 *{
   font-family: "Forum", serif;
 }
+
+:root {
+  font-family: "Forum", serif;
+
+  /* COLORS */
+  --color-1: #0d1b2a;
+  --color-2: #1b263b;
+  --color-3: #415a77;
+  --color-4: #778da9;
+  --color-6: #e0e1dd;
+  --color-delete: #e63946;
+  --color-check: #0B6E4F;
+
+  /* PADDING */
+  --pading-xs: 10px;
+  --padding-s: 20px;
+  --padding-m: 30px;
+  --padding-l: 40px;
+  --padding-xl: 50px;
+
+  /* MARGIN */
+  --margin-xs: 10px;
+  --margin-s: 20px;
+  --margin-l: 50px;
+
+  /* BORDER-RADIUS */
+  --border-radius-xs: 5px;
+  --border-radius-s: 10px;
+  --border-radius-full: 100%;
+
+  /* GAP */
+  --gap-s: 20px;
+  --gap-m: 30px;
+  --gap-xl: 100px;
+
+  /* FONT-SIZE */
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 30px;
+
+  /* WIDTH */
+  --width-full: 100%;
+  --width-input: 80%;
+  --width-s: 300px;
+  --width-m: 500px;
+  --width-l: 800px;
+}

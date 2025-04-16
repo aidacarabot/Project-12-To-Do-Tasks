@@ -1,17 +1,16 @@
  .div-addBtn > button {
-  padding : 10px;
-  font-weight: 900;
-  font-size: 16px;
-  background-color: #1b263b;
-  color: #e0e1dd;
-  border-radius: 10px;
-  border: 1px solid #e0e1dd
+  padding : var(--pading-xs);
+  font-size: var(--font-size-s);
+  background-color: var(--color-2);
+  color: var(--color-6);
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--color-6);
 }
 
 .div-addBtn > button:hover {
-  background-color: #415a77;
-  color: #e0e1dd;
-  border: 1px solid #e0e1dd;
+  background-color: var(--color-3);
+  color: var(--color-6);
+  border: 1px solid var(--color-6);
   cursor: pointer;
 }
 
@@ -19,14 +18,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: var(--margin-s);
 }
 
 .tasks-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px;
-  width: 100%;
-  gap: 30px;
+  padding: var(--padding-xl);
+  width: var(--width-full);
+  gap: var(--gap-m);
 }

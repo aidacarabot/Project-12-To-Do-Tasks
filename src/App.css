@@ -7,8 +7,8 @@
   }
 
 body {
-    background-color: #0d1b2a;
-    width: 100%;
+    background-color: var(--color-1);
+    width: var(--width-full);
     height: 100svh;
   }
 
