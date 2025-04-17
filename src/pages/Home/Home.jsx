@@ -10,7 +10,7 @@ const Home = ({ state, dispatch }) => {
       </div>
       <section className="tasks-container">
         {state.lists.map((list) => (
-          <TaskList key={list.id} list={list} dispatch={dispatch} />
+          <TaskList key={list.id} list={list} dispatch={dispatch} showAddTaskButton={true} showCompletedTasks={false} />
         ))}
       </section>
     </main>

@@ -3,7 +3,6 @@ import './Complete.css';
 import TaskList from '../../components/TaskList/TaskList';
 
 const Complete = ({ state, dispatch }) => {
-  // Filtra las listas que contienen al menos una tarea completada
   const completedLists = state.lists.filter((list) =>
     list.tasks.some((task) => task.completed)
   );
@@ -14,7 +13,7 @@ const Complete = ({ state, dispatch }) => {
         <p>No completed tasks yet!</p> // Mensaje cuando no hay tareas completadas
       ) : (
         completedLists.map((list) => (
-          <TaskList key={list.id} list={list} dispatch={dispatch} />
+          <TaskList key={list.id} list={list} dispatch={dispatch} showAddTaskButton={false} showCompletedTasks={true} />
         ))
       )}
     </div>

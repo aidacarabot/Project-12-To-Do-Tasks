@@ -3,7 +3,7 @@ import './TaskList.css';
 import useListNameEdit from '../../hooks/useListNameEdit';
 import useHandleEnter from '../../hooks/useHandleEnter';
 
-const TaskList = ({ list, dispatch }) => {
+const TaskList = ({ list, dispatch, showAddTaskButton, showCompletedTasks }) => {
   const [newTask, setNewTask] = useState("");
   const [showInput, setShowInput] = useState(false);
 
@@ -31,6 +31,11 @@ const TaskList = ({ list, dispatch }) => {
     dispatch({ type: 'DELETE_LIST', id: list.id });
   };
 
+  //? Filtramos las tasks según si estamos en la vista de completadas
+  const tasksToShow = showCompletedTasks
+    ? list.tasks.filter((task) => task.completed)
+    : list.tasks;
+
   return (
     <div className="task-list">
       <button onClick={handleDeleteList} className="delete-list-button">X</button>
@@ -50,7 +55,7 @@ const TaskList = ({ list, dispatch }) => {
         )}
       </header>
       <ul>
-        {list.tasks.map((task) => (
+        {tasksToShow.map((task) => (
           <li key={task.id}>
             {/* Nuevo checkbox */}
             <label className="container">
@@ -70,9 +75,10 @@ const TaskList = ({ list, dispatch }) => {
           </li>
         ))}
       </ul>
-      {!showInput ? (
+      {!showAddTaskButton ? null : (
         <button className="addTask-button" onClick={() => setShowInput(true)}>+ Add Task</button>
-      ) : (
+      )}
+     {showInput && (
         <div className="task-input">
           <input
             type="text"
