@@ -27,6 +27,9 @@ This is a simple and interactive To-Do List application built with **React** and
 - You can navigate between **Home** and **Completed** using the **Navbar**.
 - The app is designed to be simple and user-friendly, with smooth transitions when interacting with tasks.
 
+## Check it Out 🔗
+You can try the live version of the app here: https://to-do-list-project-aidacarabot.vercel.app/
+
 ## Contact 📬
 
 For questions or feedback, you can contact me at:
