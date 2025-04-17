@@ -22,3 +22,8 @@ nav > ul > li > a {
   color: var(--color-6);
   font-size: var(--font-size-xl);
 }
+
+nav a:active,
+nav a:focus {
+  color: var(--color-1);
+}

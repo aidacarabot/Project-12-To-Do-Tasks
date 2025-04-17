@@ -6,3 +6,11 @@
   width: var(--width-full);
   gap: var(--gap-m);
 }
+
+.complete > p {
+  font-size: var(--font-size-xl);
+  color: var(--color-6);
+  text-align: center;
+  margin-top: var(--margin-l);
+
+}

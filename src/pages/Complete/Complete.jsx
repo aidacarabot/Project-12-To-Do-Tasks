@@ -10,7 +10,7 @@ const Complete = ({ state, dispatch }) => {
   return (
     <div className="complete">
       {completedLists.length === 0 ? (
-        <p>No completed tasks yet!</p> // Mensaje cuando no hay tareas completadas
+        <p>No completed tasks yet!</p>
       ) : (
         completedLists.map((list) => (
           <TaskList key={list.id} list={list} dispatch={dispatch} showAddTaskButton={false} showCompletedTasks={true} />

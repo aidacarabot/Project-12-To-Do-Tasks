@@ -6,6 +6,8 @@ import useHandleEnter from '../../hooks/useHandleEnter';
 const TaskList = ({ list, dispatch, showAddTaskButton, showCompletedTasks }) => {
   const [newTask, setNewTask] = useState("");
   const [showInput, setShowInput] = useState(false);
+  const [tempCompletedTask, setTempCompletedTask] = useState([]);
+
 
   const { newListName, setNewListName, editingListName, setEditingListName, editListName } = useListNameEdit(list.name, list.id, dispatch);
   
@@ -21,6 +23,11 @@ const TaskList = ({ list, dispatch, showAddTaskButton, showCompletedTasks }) => 
 
   const handleToggleTask = (taskId) => {
     dispatch({ type: 'TOGGLE_TASK', listId: list.id, taskId });
+    setTempCompletedTask((prev) => [...prev, taskId]);
+    setTimeout(() => {
+      setTempCompletedTask((prev) => prev.filter((id) => id !== taskId));
+      dispatch({ type: 'TOGGLE_TASK', listId: list.id, taskId });
+    }, 500);
   };
 
   const handleDeleteTask = (taskId) => {
@@ -32,9 +39,10 @@ const TaskList = ({ list, dispatch, showAddTaskButton, showCompletedTasks }) => 
   };
 
   //? Filtramos las tasks según si estamos en la vista de completadas
+  // Filtramos las tasks según si estamos en la vista de completadas
   const tasksToShow = showCompletedTasks
-    ? list.tasks.filter((task) => task.completed)
-    : list.tasks;
+    ? list.tasks.filter(task => task.completed)
+    : list.tasks.filter(task => !task.completed || tempCompletedTask.includes(task.id)); // Mostrar también las tareas marcadas temporalmente
 
   return (
     <div className="task-list">
