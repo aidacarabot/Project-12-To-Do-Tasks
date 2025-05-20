@@ -3,8 +3,7 @@
   color: var(--color-4);
   padding: var(--padding-s);
   text-align: center;
-  position: fixed;
-  bottom: 0;
+
   width: var(--width-full);
   font-size: var(--font-size-xs);
 }
